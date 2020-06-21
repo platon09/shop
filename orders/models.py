@@ -77,5 +77,3 @@ def product_in_order_post_save(sender, instance, created, **kwargs):
 	instance.order.save(force_update=True)
 
 post_save.connect(product_in_order_post_save, sender=ProductInOrder)
-
-
