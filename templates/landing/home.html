@@ -3,12 +3,12 @@
 
 {% block content %}
 	<div class="section-top">
-		<img src="{% static 'static_dev/img/slider0.jpg' %}" class="img-responsive">
+		<img src="{% static 'img/slider0.jpg' %}" class="img-responsive">
 	</div>
-	<div class="section section1">
+	<div class="section section1 vegetables-container">
 		<div class="container">
 			<div class="row">
-				{% for product_image in products_images %}
+				{% for product_image in products_images_vegetables %}
 				<div class="col-lg-3">
 					<div class="product-item">
 						<div>
@@ -30,10 +30,10 @@
 			</div>
 		</div>
 	</div>
-		<div class="section section2">
+		<div class="section section2 fruits-container">
 		<div class="container">
 			<div class="row">
-				{% for product_image in products_images %}
+				{% for product_image in products_images_fruits %}
 				<div class="col-lg-3">
 					<div class="product-item">
 						<div>
@@ -55,10 +55,10 @@
 			</div>
 		</div>
 	</div>
-		<div class="section section3">
+		<div class="section section3 meat-container">
 		<div class="container">
 			<div class="row">
-				{% for product_image in products_images %}
+				{% for product_image in products_images_meat %}
 				<div class="col-lg-3">
 					<div class="product-item">
 						<div>
