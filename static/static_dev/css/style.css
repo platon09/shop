@@ -26,9 +26,21 @@ html, body{
 	right: 0;
 }
 
+.wrapper{
+	min-height: 100%;
+}
+
+.wrapper-content{
+	overflow: auto;
+	padding-bottom: 180px;
+}
+
 .footer{
+	position: relative;
+	margin-top: -180px;
 	background-color: white;
-	height: 200px;
+	clear: both;
+	height: 180px;
 }
 
 .discount {
@@ -45,4 +57,26 @@ html, body{
     font-weight: lighter;
     
     padding: 3px 5px;
+}
+
+.section-delivery{
+	height: 300px;
+	background-color: darkseagreen;
+	text-align: center;
+	color: white;
+}
+
+.product_info{
+	position: absolute;
+	top: 55%;
+}
+
+.my-img-responsive{
+	display: block;
+	width: 80%;
+	height: auto;
+}
+
+.product-description-tabs{
+	padding: 10px;
 }

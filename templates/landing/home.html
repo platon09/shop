@@ -12,97 +12,39 @@
 					Овощи
                 </h1>
 				{% for product_image in products_images_vegetables %}
-				<div class="col-lg-3">
-					<div class="product-item">
-						<div>
-							<img src="{{ product_image.image.url }}" class="img-responsive">
-						</div>
-						<div>
-							<span class="discount">
-								{{ product_image.product.discount }} %
-							</span>
-						</div>
-						<h4>{{ product_image.product.name }}</h4>
-						<p>{{ product_image.product.short_description|truncatechars_html:80 }}</p>
-						<div>
-							{{ product_image.product.price }} тг
-						</div>
-						<div class="add-to-card-btn">
-							<button class="btn btn-success">
-								Добавить в корзину
-							</button>
-						</div>
-					</div>
-				</div>
+					{% include 'landing/product_item.html' %}
 				{% endfor %}
 			</div>
 		</div>
 	</div>
-		<div class="section section2 fruits-container">
-		<div class="container">
-			<div class="row">
-				<h1 class="text-center">
-					Фрукты
-                </h1>
-				{% for product_image in products_images_fruits %}
-				<div class="col-lg-3">
-					<div class="product-item">
-						<div>
-							<img src="{{ product_image.image.url }}" class="img-responsive">
-						</div>
-						<div>
-							<span class="discount">
-								{{ product_image.product.discount }} %
-							</span>
-						</div>
-						<h4>{{ product_image.product.name }}</h4>
-						<p>{{ product_image.product.short_description|truncatechars_html:80 }}</p>
-						<div>
-							{{ product_image.product.price }} тг
-						</div>
-						<div class="add-to-card-btn">
-							<button class="btn btn-success">
-								Добавить в корзину
-							</button>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-			</div>
+	<div class="section section-delivery">
+		<div>
+			<h3>Free shipping</h3>
 		</div>
 	</div>
-		<div class="section section3 meat-container">
-		<div class="container">
-			<div class="row">
-				<h1 class="text-center">
-					Мясо
-                </h1>
-				{% for product_image in products_images_meat %}
-				<div class="col-lg-3">
-					<div class="product-item">
-						<div>
-							<img src="{{ product_image.image.url }}" class="img-responsive">
-						</div>
-						<div>
-							<span class="discount">
-								{{ product_image.product.discount }} %
-							</span>
-						</div>
-						<h4>{{ product_image.product.name }}</h4>
-						<p>{{ product_image.product.short_description|truncatechars_html:50 }}</p>
-						<div>
-							{{ product_image.product.price }} тг
-						</div>
-						<div class="add-to-card-btn">
-							<button class="btn btn-success">
-								Добавить в корзину
-							</button>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-			</div>
+	<div class="section section2 fruits-container">
+	<div class="container">
+		<div class="row">
+			<h1 class="text-center">
+				Фрукты
+			</h1>
+			{% for product_image in products_images_fruits %}
+				{% include 'landing/product_item.html' %}
+			{% endfor %}
 		</div>
+	</div>
+	</div>
+	<div class="section section3 meat-container">
+	<div class="container">
+		<div class="row">
+			<h1 class="text-center">
+				Мясо
+			</h1>
+			{% for product_image in products_images_meat %}
+				{% include 'landing/product_item.html' %}
+			{% endfor %}
+		</div>
+	</div>
 	</div>
 
 {% endblock content %}
