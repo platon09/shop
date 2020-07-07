@@ -80,3 +80,32 @@ html, body{
 .product-description-tabs{
 	padding: 10px;
 }
+
+.navbar-top{
+	min-height: 20px;
+	height: 20px;
+	background-color: #4bb777;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 0;
+	color: #ffffff;
+}
+
+.navbar-main{
+	background-color: #4ec67f;
+	border: none;
+	border-radius: 0;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav>.active>a{
+	background-color: #4bb777;
+	color: #ffffff;
+}
+
+.navbar-default .navbar-brand{
+	color: #ffffff;
+}
